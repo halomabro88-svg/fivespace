@@ -40,6 +40,18 @@ function cleanPhone(phone) {
   return String(phone || "").replace(/\D/g, "");
 }
 function openWhatsApp(message) {
+  const number = String(
+    FIVESPACE_CONFIG.whatsappNumber || ""
+  ).replace(/\D/g, "");
+
+  if (!number) {
+    showToast("Nomor WhatsApp belum diisi.");
+    return;
+  }
+
+  const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+  window.location.href = url;
+}
   const number = cleanPhone(FIVESPACE_CONFIG.whatsappNumber);
   if (!number || number === "NOMOR_CONTOH") {
     showToast("Nomor WhatsApp masih contoh. Ganti whatsappNumber di script.js terlebih dahulu.");
