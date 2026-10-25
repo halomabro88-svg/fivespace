@@ -5,7 +5,7 @@
  Contoh Indonesia: 081234567890 menjadi 6281234567890.
 */
 const FIVESPACE_CONFIG = {
-  whatsappNumber: "62881027563249", // GANTI dengan nomor WhatsApp Ahmad Zulfikar
+  whatsappNumber: "6287723896725", // GANTI dengan nomor WhatsApp Ahmad Zulfikar
   links: {
     shopee: "",      // Tempel URL toko Shopee
     tokopedia: "",   // Tempel URL toko Tokopedia
@@ -41,7 +41,7 @@ function cleanPhone(phone) {
 }
 function openWhatsApp(message) {
   const number = cleanPhone(FIVESPACE_CONFIG.whatsappNumber);
-  if (!number || number === "62881027563249") {
+  if (!number || number === "NOMOR_CONTOH") {
     showToast("Nomor WhatsApp masih contoh. Ganti whatsappNumber di script.js terlebih dahulu.");
     return;
   }
