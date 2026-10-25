@@ -41,7 +41,7 @@ function cleanPhone(phone) {
 }
 function openWhatsApp(message) {
   const number = cleanPhone(FIVESPACE_CONFIG.whatsappNumber);
-  if (!number || number === "6281234567890") {
+  if (!number || number === "62881027563249") {
     showToast("Nomor WhatsApp masih contoh. Ganti whatsappNumber di script.js terlebih dahulu.");
     return;
   }
